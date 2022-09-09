@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh": "ng build --output-path docs --base-href /angular-simple-store-example/",
     "watch": "ng build --watch --configuration development",
     "dev": "lite-server --baseDir=\"dist/angular-tutorial\"",
     "test": "ng test"
