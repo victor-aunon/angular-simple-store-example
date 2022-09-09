@@ -1,5 +1,7 @@
 # AngularTutorial
 
+Take a look at the build version of the project at https://victor-aunon.github.io/angular-simple-store-example
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
 ## Development server
