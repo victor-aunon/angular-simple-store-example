@@ -1,0 +1,17 @@
+:host {
+  margin: 1rem 2rem;
+  width: 100%;
+
+  .shipping-items-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .shipping-item {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+}

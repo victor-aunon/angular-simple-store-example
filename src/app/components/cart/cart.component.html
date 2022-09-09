@@ -1,0 +1,28 @@
+<h2>Cart</h2>
+
+<p><a *ngIf="items.length > 0" routerLink="/shipping">Shipping Prices</a></p>
+
+<div class="cart-items-container">
+  <p *ngIf="items.length === 0">There are no items in the cart</p>
+  <div class="cart-item" *ngFor="let item of items">
+    <img src="{{ item.imageUrl }}" alt="{{ 'Image of ' + item.name }} " />
+    <span>{{ item.name }}</span>
+    <span class="price">{{ item.price }} €</span>
+  </div>
+
+  <form
+    (ngSubmit)="onSubmit()"
+    [formGroup]="checkoutForm"
+    *ngIf="items.length > 0"
+  >
+    <div class="form-element">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" formControlName="name">
+    </div>
+    <div class="form-element">
+      <label for="address">Address</label>
+      <input type="text" name="address" id="address" formControlName="address">
+    </div>
+    <button type="submit" class="product-card-button cart-purchase-button">Purchase</button>
+  </form>
+</div>

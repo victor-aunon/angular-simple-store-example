@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/mixins";
+
+// ======== GLOBAL DEFINITIONS ========
+:root {
+  --root_main_color: #014495;
+  --root_secondary_color: #e95d11;
+  --root_content_font: "Fira Sans", sans-serif;
+}
+
+html {
+  /* Evitar que un padding o border cambie el tamaño del elemento */
+  @include box-sizing(border-box);
+  height: 100vh;
+  width: 100%;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+
+body {
+  font-family: var(--root_content_font);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+h2::before {
+  content: ">";
+  color: var(--root_secondary_color);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+.product-card-button {
+  border: none;
+  background-color: var(--root_secondary_color);
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-family: inherit;
+
+  &:hover {
+    box-shadow: 0px 0px 5px var(--root_secondary_color);
+  }
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include tablet {
+    max-width: 600px;
+  }
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.7rem 0;
+  
+  input {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="img-wrapper">
+  <img src="{{ product.imageUrl }}" alt="{{ productImgAlt }} " />
+</div>
+<h3>{{ product.name }}</h3>
+<p class="description">{{ product.description }}</p>
+<div class="price-buttons">
+  <p class="price">{{ product.price }} <span>€</span></p>
+  <div class="buttons-container">
+    <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+    <button type="button" class="product-card-button" (click)="share()">
+      Share
+    </button>
+  </div>
+</div>

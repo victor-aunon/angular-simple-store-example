@@ -1,0 +1,15 @@
+@import "../../../assets/scss/mixins";
+
+:host {
+  margin: 1rem 2rem;
+
+  .card-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    @include tablet {
+      padding: 0 1rem;
+    }
+  }
+}
